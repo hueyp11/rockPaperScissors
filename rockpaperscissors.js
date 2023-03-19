@@ -6,15 +6,14 @@ function getComputerChoice() {
     return choice
 }
 
-const playerSelection = rockPaperScissors.toString();
-const computerSelection = getComputerChoice();
+
 
 function singleRoundOfRps(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
 
     if (playerSelection == 'rock' && computerSelection == 'Rock') {
-        return console.log("This round ends in a tie.");
+            return console.log("This round ends in a tie.");
         }   else if (playerSelection == 'rock' && computerSelection == 'Paper') {
             return "You lose! Paper beats rock.";
         }   else if (playerSelection == 'rock' && computerSelection == 'Scissors') {
@@ -35,4 +34,6 @@ function singleRoundOfRps(playerSelection, computerSelection) {
     
 }
 
-console.log(singleRoundOfRps('PaPer', getComputerChoice()));
+const playerSelection = 'roCK';
+const computerSelection = getComputerChoice();
+console.log(singleRoundOfRps(playerSelection, computerSelection));

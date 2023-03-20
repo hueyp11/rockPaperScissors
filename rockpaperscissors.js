@@ -51,3 +51,14 @@ function game() {
 
 game();
 
+function declareWinner() {
+    if (playerWins > computerWins) {
+        console.log("You win!");
+    } else if (playerWins < computerWins) {
+        console.log("You lose! Computer wins!");
+    } else {
+        console.log("Game ended in a tie!")
+    }
+}
+
+declareWinner();

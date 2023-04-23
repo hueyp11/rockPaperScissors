@@ -20,9 +20,9 @@ function singleRoundOfRps(playerSelection, computerSelection) {
 
     function declareWinner() {
     if (playerWins === 5) {
-        return document.getElementById('results').innerHTML = "You win!";
+        return document.getElementById('results').innerHTML = `Player: ${playerWins} Computer: ${computerWins} <br /> You win!`;
     } else if (computerWins == 5) {
-        return document.getElementById('results').innerHTML = "You lose! Computer wins!"; 
+        return document.getElementById('results').innerHTML = `Player: ${playerWins} Computer: ${computerWins} <br /> You lose! Computer wins!`; 
     }
     }
 

@@ -19,52 +19,60 @@ function singleRoundOfRps(playerSelection, computerSelection) {
 
     var computerSelection = getComputerChoice();
 
-    if (playerSelection == 'rock' && computerSelection == 'Rock') {                   
-            return console.log("This round ends in a tie.");
+    function declareWinner() {
+    if (playerWins === 5) {
+        return console.log("You win!");
+    } else if (computerWins == 5) {
+        return console.log("You lose! Computer wins!"); 
+    }
+    }
+
+    if (playerSelection == 'rock' && computerSelection == 'Rock') { 
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);                 
+            console.log("This round ends in a tie.");
+            return declareWinner()
         }   else if (playerSelection == 'rock' && computerSelection == 'Paper') {
             computerWins = computerWins + 1;
-            return console.log("You lose! Paper beats rock.");
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
+            console.log("You lose! Paper beats rock.");
+            return declareWinner()
         }   else if (playerSelection == 'rock' && computerSelection == 'Scissors') {
             playerWins = playerWins + 1;
-            return console.log("You win! Rock beats scissors.");
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
+            console.log("You win! Rock beats scissors.");
+            return declareWinner()
         }   else if (playerSelection == 'paper' && computerSelection == 'Rock') {
             playerWins = playerWins + 1
-            return console.log("You win! Paper beats rock.");
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
+            console.log("You win! Paper beats rock.");
+            return declareWinner()
         }   else if (playerSelection == 'paper' && computerSelection == 'Paper') {
-            return console.log("This round ends in a tie.");
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
+            console.log("This round ends in a tie.");
+            return declareWinner()
         }   else if (playerSelection == 'paper' && computerSelection == 'Scissors') {
             computerWins = computerWins + 1;
-            return console.log("You lose! Scissors beats paper.");
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
+            console.log("You lose! Scissors beats paper.");
+            return declareWinner()
         }   else if (playerSelection == 'scissors' && computerSelection == 'Rock') {
             computerWins = computerWins + 1;
-            return console.log("You lose! Rock beats scissors.");
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
+            console.log("You lose! Rock beats scissors.");
+            return declareWinner()
         }   else if (playerSelection == 'scissors' && computerSelection == 'Paper') {
             playerWins = playerWins + 1
-            return console.log("You win! Scissors beats paper.");
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
+            console.log("You win! Scissors beats paper.");
+            return declareWinner()
         }   else (playerSelection == 'scissors' && computerSelection == 'Scissors'); {
-            return console.log("This round ends in a tie.");
-        }    
+            console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
+            console.log("This round ends in a tie.");
+            return declareWinner()
+        }
+          
 }
 
-
-function game() {
-
-    for (let i = 0; i < 5; i++) {
-
-        singleRoundOfRps();
-        console.log("Player: " + playerWins + " " + "Computer: " + computerWins);
-    }
-}
-
-function declareWinner() {
-    if (playerWins > computerWins) {
-        console.log("You win!");
-    } else if (playerWins < computerWins) {
-        console.log("You lose! Computer wins!");
-    } else {
-        console.log("Game ended in a tie!")
-    }
-}
 
 
 

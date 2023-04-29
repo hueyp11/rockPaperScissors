@@ -31,30 +31,30 @@ function singleRoundOfRps(playerSelection, computerSelection) {
             return declareWinner();
         }   else if (playerSelection == 'rock' && computerSelection == 'Paper') {
             computerWins = computerWins + 1;
-            document.getElementById('results').innerHTML = `You lose! Paper beats rock. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
+            document.getElementById('results').innerHTML = `You lose this round! Paper beats rock. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
             return declareWinner()
         }   else if (playerSelection == 'rock' && computerSelection == 'Scissors') {
             playerWins = playerWins + 1;
-            document.getElementById('results').innerHTML = `You win! Rock beats scissors. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
+            document.getElementById('results').innerHTML = `You win this round! Rock beats scissors. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
             return declareWinner()
         }   else if (playerSelection == 'paper' && computerSelection == 'Rock') {
             playerWins = playerWins + 1
-            document.getElementById('results').innerHTML = `You win! Paper beats rock. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
+            document.getElementById('results').innerHTML = `You win this round! Paper beats rock. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
             return declareWinner()
         }   else if (playerSelection == 'paper' && computerSelection == 'Paper') {
             document.getElementById('results').innerHTML = `This round ends in a tie. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
             return declareWinner()
         }   else if (playerSelection == 'paper' && computerSelection == 'Scissors') {
             computerWins = computerWins + 1;
-            document.getElementById('results').innerHTML = `You lose! Scissors beats paper. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
+            document.getElementById('results').innerHTML = `You lose this round! Scissors beats paper. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
             return declareWinner()
         }   else if (playerSelection == 'scissors' && computerSelection == 'Rock') {
             computerWins = computerWins + 1;
-            document.getElementById('results').innerHTML = `You lose! Rock beats scissors. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
+            document.getElementById('results').innerHTML = `You lose this round! Rock beats scissors. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
             return declareWinner()
         }   else if (playerSelection == 'scissors' && computerSelection == 'Paper') {
             playerWins = playerWins + 1
-            document.getElementById('results').innerHTML = `You win! Scissors beats paper. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
+            document.getElementById('results').innerHTML = `You win this round! Scissors beats paper. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
             return declareWinner()
         }   else (playerSelection == 'scissors' && computerSelection == 'Scissors'); {
             document.getElementById('results').innerHTML = `This round ends in a tie. <br /> Player: ${playerWins} Computer: ${computerWins}`;                 
